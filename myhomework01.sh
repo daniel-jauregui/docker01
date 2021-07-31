@@ -57,7 +57,7 @@ docker network connect leinad jk
 # Sonatype Nexus 3
 mkdir /home/ubuntu/storage/hw1/nexus/nexus-data
 sudo chown -R 200 /home/ubuntu/storage/hw1/nexus/nexus-data
-docker run -d -p 8081:8081 --name nexus -v /home/ubuntu/storage/hw1/nexus/nexus-data:/nexus-data sonatype/nexus3
+docker run -d -p 8081:8081 -p 8082:8082 -p 8083:8083 --name nexus -v /home/ubuntu/storage/hw1/nexus/nexus-data:/nexus-data sonatype/nexus3
 
 # Portainer
 mkdir /home/ubuntu/storage/hw1/portainer/portainer_data
